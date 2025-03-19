@@ -22,6 +22,8 @@
 		<spring-boot-starter-test.version>3.4.3</spring-boot-starter-test.version>
 		<mysql-connector-j.version>9.2.0</mysql-connector-j.version>
 		<lombok.version>1.18.36</lombok.version>
+		<flyway-core.version>11.3.0</flyway-core.version>
+		<flyway-mysql.version>11.3.0</flyway-mysql.version>
 	</properties>
 
 	<dependencies>
@@ -53,6 +55,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<version>${spring-boot-starter-test.version}</version>
+		</dependency>
+
+		<!-- Flyway -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>${flyway-core.version}</version>
+		</dependency>
+		<!-- Suporte específico para MySQL no Flyway -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-mysql</artifactId>
+			<version>${flyway-mysql.version}</version>
 		</dependency>
 	</dependencies>
 
